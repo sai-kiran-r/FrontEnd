@@ -1,0 +1,58 @@
+body{ background-image: url("images02/plaingreen.jpg");}
+#body3 {background-image: url("images02/plaingreen.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: min-content;
+    background-size:cover;}
+#body1 {background-image: url("images02/blue");
+    background-repeat: no-repeat;
+    background-position: center;
+    height:700px;
+    background-size:cover;}
+#body2 {background-image: url("images02/plainbrown");
+        background-repeat: no-repeat;
+        background-position: center;
+        height:700px;
+        background-size:cover;}
+#body0 {background-image: url("images02/plainbrown");
+        background-repeat: no-repeat;
+        background-position: center;
+        height:900px;
+        background-size:cover;}        
+#coffeeandtea{background-image: url("images02/Coffeeandtea");
+     background-position: center;
+     background-repeat:no-repeat ;
+     background-attachment: fixed;
+     margin-right: 20px;}
+#one{margin-left: 40px;
+    margin-right: 40px;}
+#two{position: absolute; 
+    bottom: 0px;
+    padding-left: 1100px;}
+.nav{
+    text-decoration: none; 
+    padding: 20px;
+    font-size: 20px;
+}    
+.h1{
+    text-align: center;
+    font-style:italic;
+    font-size: 45px;
+    color: rgb(243, 59, 59);
+}
+.image{
+    float: auto;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+}
+.description {
+    padding: 2px;
+    text-align: auto;
+    font-style: italic;
+    font-size: medium;
+}
+#block {
+    padding-left: 5px;   
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Table</title>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javascript.js"></script>
+</head>
+<body>
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th></th>
+                <th>STUDENT</th>
+                <th>ADVISOR</th>
+                <th>AWARD<br/>STATUS</th>
+                <th>SEMESTER</th>
+                <th>TYPE</th>
+                <th>BUDGET<br />#</th>
+                <th>PERCENTAGE</th>
+                <th id="deleteEl">DELETE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" onclick="selectone(this)"/><br /><br />
+                    <img src="down.png" width="25px" onclick="hide(this)"/></td>
+                <td>Student 1</td>
+                <td>Teacher 1</td>
+                <td>Approved</td>
+                <td>Fall</td>
+                <td>TA</td>
+                <td>12345</td>
+                <td>100%</td>
+                <td class="delete"><button id="del" onclick="Delete(this)">Delete</button></td>
+                <!-- <td></td> -->
+            </tr>
+            <tr class="dropDownTextArea"><td colspan="8">
+                Advisor:<br /><br />
+                Award Details<br />
+                Summer 1-2014(TA)<br />
+                Budget Number: <br />
+                Tuition Number: <br />
+                Comments:<br /><br /><br />
+                Award Status:<br /><br /><br />
+            </td>
+        </tr>
+        </tbody>
+		<tfoot>
+        </tfoot>
+	</table>
+    <br /><br />
+	
+	<button id="button">SUBMIT SELECTED AWARDS</button>
+    <input type="submit" value="Add New Student" onclick="addrow()">
+    
+</body>
+</html>

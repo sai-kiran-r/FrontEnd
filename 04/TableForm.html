@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Feedback Form</title>
+</head>
+<body>
+    <div id="container">
+        <main>
+        <h2>Feeback</h2>
+        <hr>
+        <h3>Love something? Hate something? Please Let us know!</h3>
+            Note:-  Fields marked with an asterisk(*) are mandatory
+            <br>
+            <br>
+            <form>
+                <label for="Title">Title:*</label>
+                <input type="radio" name="Title" id="Mr" value="Mr" required="required">Mr.
+                <input type="radio" name="Title" id="Mrs" value="Mrs" required="required">Mrs.
+                <input type="radio" name="Title" id="Miss" value="Miss" required="required">Miss.
+                <br>
+                <br>
+                <label for="FirstName">First Name:*</label>
+                <input type="text" name="FirstName" id="Firstname" required="required" placeholder="First Name" onblur="validateInput(this, 1, 'FName')">
+                <br>
+                <br>
+                <div id="errorMsgFName" style="display: none; color: red;">
+                    Please enter valid first name    
+                </div>
+                <br>
+                <br>
+                <label for="LastName">Last Name:*</label>
+                <input type="text" name="LastName" id="LastName" required="required" placeholder="Last Name" onblur="validateInput(this, 1, 'LName')">
+                <br>
+                <br>
+                <div id="errorMsgLName" style="display: none; color: red;">
+                    Please enter valid last name 
+                </div>
+                <br>
+                <br>
+                <label for="Email">Email ID:*</label>
+                <input type="text" name="Email" id="Email" required="required" placeholder="mail@domain.com" onblur="validateInput(this, 2)">
+                <br>
+                <br>
+                <div id="errorMsgEmail" style="display: none; color: red;">
+                    Please enter valid Email
+                </div>
+                <br>
+                <br>
+                <label for="Phone">Phone Number:*</label>
+                <input type="text" name="Phone" id="Phone" required="required" placeholder="xxx-xxx-xxxx" onblur="validateInput(this, 3)">
+                <br>
+                <br>
+                <div id="errorMsgPhone" style="display: none; color: red;">
+                    Please enter phone number in xxx-xxx-xxxx format
+                </div>
+                <br>
+                <br>
+                <label for="Zip">Zip Code:*</label>
+                <input type="text" name="Zip" id="Zip" required="required" placeholder="xxxx" onblur="validateInput(this, 4)">
+                <br>
+                <br>
+                <div id="errorMsgZip" style="display: none; color: red;">
+                    Please enter Zip Code in xxxxx format
+                </div>
+                <br>
+                <br>
+                <label>How did you hear:*</label>
+                <input type="radio" name="Social" id="Social" value="Facebook" required="required">Facebook
+                <input type="radio" name="Social" id="Social" value="Instagram" required="required">Instagram
+                <input type="radio" name="Social" id="Social" value="Twitter" required="required">Twitter
+                <br><br>
+                <br>
+                <label for="coffee">Select one drink:*</label>
+                <select name="coffee" id="coffee" onchange="menuOptions()">
+                    <option value="none">Choose One</option>
+                    <option value="Cappuccino" onclick="cap()">Cappuccino</option>
+                    <option value="Latte" onclick="lat()">Latte</option>
+                    <option value="Espresso" onclick="esp()">Espresso</option>
+                    <option value="IceTea" onclick="ice()">Ice Tea</option>
+                    <option value="BlackTea" onclick="bla()">Black Tea</option>
+                </select>
+                <br>
+                <br>
+                <div id="hidden1" style="display: none;">
+                    <input type="checkbox" name="cap" id="cap" required = "required" onclick="displayBox(this)"> Large Cappuccino*
+                <P id="box"></P>
+                </div>
+                <div id="hidden2" style="display: none;">
+                    <input type="checkbox" name="lat" id="lat" required = "required" onclick="displayBox(this)"> Large Latte*
+                <p id="box"></p>
+                </div>
+                <div id="hidden3" style="display: none;">
+                    <input type="checkbox" name="esp" id="esp" required = "required" onclick="displayBox(this)"> Medium Espresso*
+                <p id="box"></p>
+                </div>
+                <div id="hidden4" style="display: none;">
+                    <input type="checkbox" name="ice" id="ice" required = "required" onclick="displayBox(this)"> Medium IceTea*
+                <p id="box"></p>
+                </div>
+                <div id="hidden5" style="display: none;">
+                    <input type="checkbox" name="bla" id="bla" required = "required" onclick="displayBox(this)"> Regular Tea*
+                <p id="box"></p>
+                </div>
+                <div id="disc" style="display: none;">
+                    <label for="disc">Description:*</label>
+                    <input type="text" name="box" required = "required" placeholder="description" onblur="validateInput(this, 5)">
+                    <div id="errorMsgBox" style="display: none; color: red;">
+                        Please enter Additional Comments
+                    </div>
+                </div>
+                <br>
+                <br>
+                <label>Comments:*</label>
+                <textarea type="text" name="Comments" id="Comments" required="required" rows="5" cols="16" 
+                        placeholder="Add your Comments" onblur="validateInput(this, 5)"></textarea>
+                <br>
+                <br>
+                <input type="button" value="Submit" onclick="mySubmit()">
+                <input type="button" value="Reset" onclick="myReset()">
+            <br><br>
+            </form>
+            <!-- Below will dispaly the table for the entered values-->
+            <br>
+            <br>
+            <div>
+                Click Submit to view the details:- 
+                <br /><br />
+              </div>
+              <table id="tableData" border="1" cellpadding="2">
+                <tr>
+                  <td><b>Title</b></td>
+                  <td><b>First Name</b></td>
+                  <td><b>Last Name</b></td>
+                  <td><b>Email </b></td>
+                  <td><b>Number</b></td>
+                  <td><b>Zip </b></td>
+                  <td><b>How did you here</b></td>
+                  <td><b>Selected Drink</b></td>
+                  <td><b>Comments</b></td>
+                </tr>
+              </table>
+        </main>
+    </div>
+</body>
+</html>

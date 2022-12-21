@@ -1,0 +1,34 @@
+body{
+    font-family: 'Verdana', Arial, sans-serif;
+    background-color: #f5f5dc;
+    color: #2e0000;
+}
+h1{
+    background-color: #d2b48c;
+    font-family: 'Georgia', 'Times New Roman', 'serif';
+}
+h2{
+    font-family: 'Georgia', 'Times New Roman', 'serif';
+}
+h3{
+    background-color: #e6d6a9;
+    text-transform: uppercase;
+}
+dt{
+    font-weight: bold;
+}
+ul{
+    list-style-image: url("Assignment 2A images/marker1.gif");
+}
+footer{
+    background-color: #d2b48c;
+    color: #000000;
+    text-align: center;
+    font-size: .60em;
+    font-style: italic;
+}
+nav{
+    font-weight: bold;
+    text-decoration: none;
+}
+
